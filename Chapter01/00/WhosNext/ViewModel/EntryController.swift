@@ -1,4 +1,4 @@
-class EntryController: ObservableObject {
+class EntryController {
   private var count = 0
 }
 

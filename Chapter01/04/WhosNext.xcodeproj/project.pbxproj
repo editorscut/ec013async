@@ -15,7 +15,6 @@
 		62415DFA292C061400DDD307 /* PlainEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62415DF5292C061400DDD307 /* PlainEntry.swift */; };
 		62415DFB292C061400DDD307 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62415DF6292C061400DDD307 /* EntryController.swift */; };
 		62415DFE292C081300DDD307 /* DivisibleByFiveError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62415DFD292C081300DDD307 /* DivisibleByFiveError.swift */; };
-		62415E00292C0BA500DDD307 /* AsyncErrorEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62415DFF292C0BA500DDD307 /* AsyncErrorEntry.swift */; };
 		62415E02292C280500DDD307 /* EntryGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62415E01292C280500DDD307 /* EntryGrid.swift */; };
 		62BEE291292BFF1F00FB5068 /* WhosNextApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BEE290292BFF1F00FB5068 /* WhosNextApp.swift */; };
 		62BEE293292BFF1F00FB5068 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BEE292292BFF1F00FB5068 /* MainView.swift */; };
@@ -31,7 +30,6 @@
 		62415DF5292C061400DDD307 /* PlainEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlainEntry.swift; sourceTree = "<group>"; };
 		62415DF6292C061400DDD307 /* EntryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 		62415DFD292C081300DDD307 /* DivisibleByFiveError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisibleByFiveError.swift; sourceTree = "<group>"; };
-		62415DFF292C0BA500DDD307 /* AsyncErrorEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncErrorEntry.swift; sourceTree = "<group>"; };
 		62415E01292C280500DDD307 /* EntryGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryGrid.swift; sourceTree = "<group>"; };
 		62BEE28D292BFF1F00FB5068 /* WhosNext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhosNext.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BEE290292BFF1F00FB5068 /* WhosNextApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhosNextApp.swift; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 				62415DF4292C061300DDD307 /* ErrorEntry.swift */,
 				62415DF3292C061300DDD307 /* SleepingEntry.swift */,
 				62415DF2292C061300DDD307 /* AsyncEntry.swift */,
-				62415DFF292C0BA500DDD307 /* AsyncErrorEntry.swift */,
 			);
 			path = Vendors;
 			sourceTree = "<group>";
@@ -221,7 +218,6 @@
 				62415DFA292C061400DDD307 /* PlainEntry.swift in Sources */,
 				62415DF8292C061400DDD307 /* SleepingEntry.swift in Sources */,
 				62415DFB292C061400DDD307 /* EntryController.swift in Sources */,
-				62415E00292C0BA500DDD307 /* AsyncErrorEntry.swift in Sources */,
 				62415DF9292C061400DDD307 /* ErrorEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

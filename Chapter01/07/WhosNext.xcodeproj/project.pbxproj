@@ -16,10 +16,21 @@
 		62415DFB292C061400DDD307 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62415DF6292C061400DDD307 /* EntryController.swift */; };
 		62415DFE292C081300DDD307 /* DivisibleByFiveError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62415DFD292C081300DDD307 /* DivisibleByFiveError.swift */; };
 		62415E02292C280500DDD307 /* EntryGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62415E01292C280500DDD307 /* EntryGrid.swift */; };
+		6293C06C2936541E009764BF /* WhosNextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6293C06B2936541E009764BF /* WhosNextTests.swift */; };
 		62BEE291292BFF1F00FB5068 /* WhosNextApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BEE290292BFF1F00FB5068 /* WhosNextApp.swift */; };
 		62BEE293292BFF1F00FB5068 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BEE292292BFF1F00FB5068 /* MainView.swift */; };
 		62BEE295292BFF2000FB5068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62BEE294292BFF2000FB5068 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6293C06D2936541E009764BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62BEE285292BFF1F00FB5068 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62BEE28C292BFF1F00FB5068;
+			remoteInfo = WhosNext;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		62415DED292C008400DDD307 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -31,6 +42,8 @@
 		62415DF6292C061400DDD307 /* EntryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 		62415DFD292C081300DDD307 /* DivisibleByFiveError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisibleByFiveError.swift; sourceTree = "<group>"; };
 		62415E01292C280500DDD307 /* EntryGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryGrid.swift; sourceTree = "<group>"; };
+		6293C0692936541E009764BF /* WhosNextTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhosNextTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6293C06B2936541E009764BF /* WhosNextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhosNextTests.swift; sourceTree = "<group>"; };
 		62BEE28D292BFF1F00FB5068 /* WhosNext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhosNext.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BEE290292BFF1F00FB5068 /* WhosNextApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhosNextApp.swift; sourceTree = "<group>"; };
 		62BEE292292BFF1F00FB5068 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -38,6 +51,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6293C0662936541E009764BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		62BEE28A292BFF1F00FB5068 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -76,10 +96,19 @@
 			path = Vendors;
 			sourceTree = "<group>";
 		};
+		6293C06A2936541E009764BF /* WhosNextTests */ = {
+			isa = PBXGroup;
+			children = (
+				6293C06B2936541E009764BF /* WhosNextTests.swift */,
+			);
+			path = WhosNextTests;
+			sourceTree = "<group>";
+		};
 		62BEE284292BFF1F00FB5068 = {
 			isa = PBXGroup;
 			children = (
 				62BEE28F292BFF1F00FB5068 /* WhosNext */,
+				6293C06A2936541E009764BF /* WhosNextTests */,
 				62BEE28E292BFF1F00FB5068 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				62BEE28D292BFF1F00FB5068 /* WhosNext.app */,
+				6293C0692936541E009764BF /* WhosNextTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +172,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6293C0682936541E009764BF /* WhosNextTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6293C0712936541E009764BF /* Build configuration list for PBXNativeTarget "WhosNextTests" */;
+			buildPhases = (
+				6293C0652936541E009764BF /* Sources */,
+				6293C0662936541E009764BF /* Frameworks */,
+				6293C0672936541E009764BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6293C06E2936541E009764BF /* PBXTargetDependency */,
+			);
+			name = WhosNextTests;
+			productName = WhosNextTests;
+			productReference = 6293C0692936541E009764BF /* WhosNextTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		62BEE28C292BFF1F00FB5068 /* WhosNext */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62BEE29B292BFF2000FB5068 /* Build configuration list for PBXNativeTarget "WhosNext" */;
@@ -169,6 +217,10 @@
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
+					6293C0682936541E009764BF = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 62BEE28C292BFF1F00FB5068;
+					};
 					62BEE28C292BFF1F00FB5068 = {
 						CreatedOnToolsVersion = 14.1;
 					};
@@ -188,11 +240,19 @@
 			projectRoot = "";
 			targets = (
 				62BEE28C292BFF1F00FB5068 /* WhosNext */,
+				6293C0682936541E009764BF /* WhosNextTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6293C0672936541E009764BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		62BEE28B292BFF1F00FB5068 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -205,6 +265,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6293C0652936541E009764BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6293C06C2936541E009764BF /* WhosNextTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		62BEE289292BFF1F00FB5068 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -224,7 +292,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		6293C06E2936541E009764BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62BEE28C292BFF1F00FB5068 /* WhosNext */;
+			targetProxy = 6293C06D2936541E009764BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		6293C06F2936541E009764BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MG5SW9CY8D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dimsumthinking.WhosNextTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhosNext.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WhosNext";
+			};
+			name = Debug;
+		};
+		6293C0702936541E009764BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MG5SW9CY8D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dimsumthinking.WhosNextTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhosNext.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WhosNext";
+			};
+			name = Release;
+		};
 		62BEE299292BFF2000FB5068 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -400,6 +512,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6293C0712936541E009764BF /* Build configuration list for PBXNativeTarget "WhosNextTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6293C06F2936541E009764BF /* Debug */,
+				6293C0702936541E009764BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		62BEE288292BFF1F00FB5068 /* Build configuration list for PBXProject "WhosNext" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
