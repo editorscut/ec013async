@@ -2,7 +2,7 @@ import XCTest
 @testable import WhosNext
 
 final class WhosNextTests: XCTestCase {
-  let vendor = AsyncEntry()
+  let vendor = AsyncEntryVendor()
 
   let entry3 = Entry(imageName: "3.circle")
   let errorEntry = Entry.errorEntry

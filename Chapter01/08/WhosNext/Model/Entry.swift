@@ -1,28 +1,19 @@
 import Foundation
 
-struct Entry {
-  let date = Date()
+struct Entry: Identifiable {
+  let id = UUID()
   let imageName: String
 }
 
-extension Entry: Hashable,  Identifiable {
-  var id: Int  {
-   hashValue
+extension Entry {
+  static var errorEntry: Entry {
+    Entry(imageName: "circle.slash")
   }
 }
 
 extension Entry: Equatable {
-  static func ==(lhs: Entry, rhs: Entry) -> Bool {
+  static func == (lhs: Entry, rhs: Entry) -> Bool {
     lhs.imageName == rhs.imageName
-  }
-}
-
-extension Entry {
-  var representsError: Bool {
-    imageName == "circle.slash"
-  }
-  static var errorEntry: Entry {
-    Entry(imageName: "circle.slash")
   }
 }
 

@@ -14,7 +14,7 @@ extension EntryGrid: View {
           Image(systemName: entry.imageName)
             .resizable()
             .scaledToFit()
-            .foregroundColor(entry.representsError ? .red : .primary)
+            .foregroundColor(entry == errorEntry() ? .red : .primary)
         }
       }
     }
