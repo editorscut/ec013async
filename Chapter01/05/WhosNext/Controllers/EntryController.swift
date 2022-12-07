@@ -1,4 +1,4 @@
-import Foundation
+import Combine
 
 @MainActor
 class EntryController: ObservableObject {
@@ -16,4 +16,3 @@ extension EntryController {
     }
   }
 }
-

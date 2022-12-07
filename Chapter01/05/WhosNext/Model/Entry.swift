@@ -5,10 +5,8 @@ struct Entry: Identifiable {
   let imageName: String
 }
 
-extension Entry {
-  static var errorEntry: Entry {
-    Entry(imageName: "circle.slash")
-  }
+func errorEntry() -> Entry {
+  Entry(imageName: "circle.slash")
 }
 
 extension Entry: Equatable {
@@ -26,7 +24,7 @@ extension Entry {
     Entry(imageName: "2.circle"),
     Entry(imageName: "3.circle"),
     Entry(imageName: "4.circle"),
-    Entry.errorEntry]
+    errorEntry()]
   }
 }
 

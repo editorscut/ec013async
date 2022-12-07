@@ -9,8 +9,7 @@ extension MainView: View {
     NavigationStack {
       VStack {
         EntryGrid(entries: controller.entries)
-        Button("Next",
-               action: controller.next)
+        Button("Next"){controller.next()}
       }
       .padding()
       .navigationTitle("Entries")

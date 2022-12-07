@@ -1,10 +1,10 @@
-struct AsyncEntryVendor  {
+struct AsyncEntryVendor {
   func entry(for count: Int) async -> Entry {
     do {
-      let imageName = try await imageName(for: count) + suffix
+      let imageName = try await imageName(for: count)
       return Entry(imageName: imageName)
     } catch {
-      return Entry.errorEntry
+      return errorEntry()
     }
   }
 }
@@ -15,22 +15,11 @@ extension AsyncEntryVendor {
       throw MultipleOfFiveError(number: int)
     }
     let number = int % 50
-    try? await Task.sleep(for: .seconds(1))
-    return number.description
+    return await number.description + suffix()
   }
 }
 
-extension AsyncEntryVendor {
-  private var suffix: String {
-    get async {
-      try? await Task.sleep(nanoseconds: nanosecondsDelay)
-      return ".circle"
-    }
-  }
-}
-
-extension AsyncEntryVendor {
-  private var nanosecondsDelay: UInt64 {
-    1_000_000_000 *  UInt64.random(in: 2...6)
-  }
+func suffix() async -> String {
+  try? await Task.sleep(for: .seconds(Int.random(in: 2...6)))
+  return ".circle"
 }

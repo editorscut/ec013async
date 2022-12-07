@@ -83,6 +83,7 @@
 				62BEE28E292BFF1F00FB5068 /* Products */,
 			);
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		62BEE28E292BFF1F00FB5068 /* Products */ = {
 			isa = PBXGroup;

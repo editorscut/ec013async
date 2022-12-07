@@ -3,33 +3,33 @@ import XCTest
 
 final class WhosNextTests: XCTestCase {
   let vendor = AsyncEntryVendor()
-
   let entry3 = Entry(imageName: "3.circle")
-  let errorEntry = Entry.errorEntry
   
   func testEntryCreation() async throws {
-    let result = await vendor.entry(for: 3)
+    let result = await vendor.entry(for: 203)
     XCTAssertEqual(result, entry3)
   }
   
   func testErrorEntryCreation() async throws {
     let result = await vendor.entry(for: 5)
-    XCTAssertEqual(result, errorEntry)
+    XCTAssertEqual(result, errorEntry())
   }
   
-  func testImageNameForLargeValidInput() async throws {
-    let result = try await vendor.imageName(for: 203)
-    XCTAssertEqual(result, "3")
-  }
-  
-  func testImageNameForMultipleOfFive() async throws {
-    var throwsError: Bool
+  func testImageNameCreatesEntry() async throws {
     do {
-      _ = try await vendor.imageName(for: 5)
-      throwsError = false
+      let result = try await vendor.imageName(for: 53)
+      XCTAssertEqual(result, entry3.imageName)
     } catch {
-      throwsError = true
+      XCTAssertFalse(true, error.localizedDescription)
     }
-    XCTAssertTrue(throwsError, "Multiple of 5 causes error to be thrown")
+  }
+  
+  func testImageNameCreatesError() async throws {
+    do {
+      let _ = try await vendor.imageName(for: 5)
+      XCTAssertTrue(false, "Expected MultipleOfFiveError")
+    } catch {
+      XCTAssertTrue(true, error.localizedDescription)
+    }
   }
 }

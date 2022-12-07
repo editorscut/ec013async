@@ -13,9 +13,3 @@ extension SleepingEntryVendor {
     return "\(number).circle"
   }
 }
-
-extension SleepingEntryVendor {
-  private var secondsDelay:UInt32 {
-    UInt32.random(in: 2...6)
-  }
-}

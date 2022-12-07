@@ -12,8 +12,3 @@ extension AsyncEntryVendor {
   }
 }
 
-extension AsyncEntryVendor {
-  private var nanosecondsDelay: UInt64 {
-    1_000_000_000 *  UInt64.random(in: 2...6)
-  }
-}
