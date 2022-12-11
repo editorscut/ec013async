@@ -10,7 +10,8 @@ struct SleepingEntryVendor  {
 extension SleepingEntryVendor {
   private func imageName(for int: Int) -> String {
     let number = int % 50
-    Thread.sleep(forTimeInterval: Double.random(in: 2...6))
+    Thread.sleep(forTimeInterval:
+                  Double.random(in: 2...6))
     return "\(number).circle"
   }
 }

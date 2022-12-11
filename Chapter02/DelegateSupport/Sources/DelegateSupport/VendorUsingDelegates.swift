@@ -3,7 +3,6 @@ public class VendorUsingDelegates {
   public private(set) var number = 0
   public private(set) var delta = 0
   
-  
   public init(delegate: VendorDelegate) {
     self.delegate = delegate
   }

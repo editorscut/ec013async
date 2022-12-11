@@ -20,6 +20,7 @@ extension AsyncEntryVendor {
 }
 
 func suffix() async -> String {
-  try? await Task.sleep(for: .seconds(Int.random(in: 2...6)))
+  try? await Task.sleep(for:
+                        .seconds(Int.random(in: 2...6)))
   return ".circle"
 }

@@ -3,7 +3,7 @@ import SwiftUI
 struct EntryGrid {
   let entries: [Entry]
   private let columns = [GridItem(.adaptive(minimum: 50,
-                                           maximum: 80))]
+                          maximum: 80))]
 }
 
 extension EntryGrid: View {

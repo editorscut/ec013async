@@ -10,7 +10,8 @@ struct AsyncEntryVendor {
 }
 
 extension AsyncEntryVendor {
-  private func imageName(for int: Int) async throws -> String {
+  private func imageName(for int: Int)
+                                  async throws -> String {
     if int.isMultiple(of: 5) {
       throw MultipleOfFiveError(number: int)
     }
@@ -20,6 +21,7 @@ extension AsyncEntryVendor {
 }
 
 func suffix() async -> String {
-  try? await Task.sleep(for: .seconds(Int.random(in: 2...6)))
+  try? await Task.sleep(for:
+                        .seconds(Int.random(in: 2...6)))
   return ".circle"
 }

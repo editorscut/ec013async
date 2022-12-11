@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct MainView {
-  @StateObject private var controller = EntryController()
+  @StateObject private var controller
+    = EntryController()
 }
 
 extension MainView: View {
