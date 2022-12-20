@@ -4,7 +4,7 @@ class ToolDemo{
 
 extension ToolDemo {
   @available(*, renamed: "demo1()")
-  func demo1(completion: @escaping (Int, Bool) -> ()) {
+  func demo1(completion: @escaping (Int, Bool) -> Void) {
     Task {
       let result = await demo1()
       completion(result.0, result.1)
@@ -22,7 +22,7 @@ extension ToolDemo {
 
 extension ToolDemo {
   @available(*, renamed: "demo2()")
-  func demo2(completion: @escaping (Int, Bool) -> ()) {
+  func demo2(completion: @escaping (Int, Bool) -> Void) {
     Task {
       let (number, isGreater) = await demo2()
       completion(number, isGreater)
@@ -50,7 +50,7 @@ extension ToolDemo {
 
 extension ToolDemo {
   @available(*, renamed: "demo4()")
-  func demo4(completion: @escaping (Int, Bool) -> ()) {
+  func demo4(completion: @escaping (Int, Bool) -> Void) {
     Task {
       let numberBeforeChange = number
       try? await Task.sleep(for: .seconds(0.5))

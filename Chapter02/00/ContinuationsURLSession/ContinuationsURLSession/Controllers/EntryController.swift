@@ -11,7 +11,7 @@ class EntryController: ObservableObject {
 extension EntryController {
   func next() {
     isUpdating = true
-    vendor.randomNumber { number in
+    vendor.selectRandomNumber { number in
       self.entry = Entry(imageName: number.description + self.suffix)
       self.isUpdating = false
     }

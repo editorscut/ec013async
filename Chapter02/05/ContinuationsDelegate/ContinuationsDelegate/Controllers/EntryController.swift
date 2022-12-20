@@ -2,7 +2,7 @@ import Foundation
 
 @MainActor
 class EntryController: ObservableObject {
-  @Published private(set) var entry: Entry = blankEntry()
+  @Published private(set) var entry = blankEntry()
   @Published private(set) var isUpdating = false
   @Published private(set) var delta = "..."
   let suffix = ".circle"
@@ -12,12 +12,13 @@ class EntryController: ObservableObject {
 extension EntryController {
   func next() {
     Task {
-      let _ = await wrapper.requestRandomEntryNumber()
+      await wrapper.requestRandomEntryNumber()
       isUpdating = true
       do {
-        let result = try await wrapper.receiveRandomEntryNumber()
-        entry = Entry(imageName: result.number.description + suffix)
-        delta = result.delta.description
+        let (number, delta)
+        = try await wrapper.receiveRandomEntryNumber()
+        entry = Entry(imageName: number.description + suffix)
+        self.delta = delta.description
       } catch {
         entry = errorEntry()
         delta = ""

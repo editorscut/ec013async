@@ -2,7 +2,7 @@ import Foundation
 
 @MainActor
 class EntryController: ObservableObject {
-  @Published private(set) var entry: Entry = blankEntry()
+  @Published private(set) var entry = blankEntry()
   @Published private(set) var isUpdating = false
   let suffix = ".circle"
   private let vendor = VendorUsingURLSession()

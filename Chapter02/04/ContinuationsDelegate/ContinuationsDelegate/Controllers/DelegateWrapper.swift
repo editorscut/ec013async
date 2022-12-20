@@ -2,8 +2,8 @@ import DelegateSupport
 
 class DelegateWrapper {
   lazy private var numberVendor
-    = VendorUsingDelegates(delegate: self)
-  var requestContinuation: CheckedContinuation<(), Never>?
+    = DelegatingVendor(delegate: self)
+  var requestContinuation: CheckedContinuation<Void, Never>?
   var receiveContinuation: CheckedContinuation<(Int, Int), Never>?
 }
 
@@ -12,7 +12,7 @@ extension DelegateWrapper {
   func requestRandomEntryNumber() async {
     await withCheckedContinuation {continuation in
       requestContinuation = continuation
-      numberVendor.randomNumber()
+      numberVendor.selectRandomNumber()
     }
   }
   @MainActor
@@ -24,13 +24,13 @@ extension DelegateWrapper {
 }
 
 extension DelegateWrapper: VendorDelegate {
-  func vendorWillSelect(_ vendor: VendorUsingDelegates) {
+  func vendorWillSelect(_ vendor: DelegatingVendor) {
     requestContinuation?.resume(returning: ())
     requestContinuation = nil
   }
   
-  func vendorDidSelect(_ vendor: VendorUsingDelegates,
-                       number: Int) {
+  func vendor(_ vendor: DelegatingVendor,
+              didSelect number: Int) {
     receiveContinuation?.resume(returning: (number,
                                             vendor.delta))
     receiveContinuation = nil

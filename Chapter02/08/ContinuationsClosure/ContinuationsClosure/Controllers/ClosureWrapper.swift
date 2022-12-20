@@ -1,13 +1,14 @@
 import ClosureSupport
 
 class ClosureWrapper {
-  let vendor = VendorUsingClosures()
+  let vendor = ClosureBasedVendor()
 }
 
 extension ClosureWrapper {
+  @MainActor
   func randomNumber() async -> (Int, Bool) {
     await withCheckedContinuation { continuation in
-      vendor.randomNumber { number, isGreater in
+      vendor.selectRandomNumber { number, isGreater in
         continuation.resume(returning: (number, isGreater))
       }
     }

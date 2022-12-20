@@ -1,5 +1,5 @@
-public protocol VendorDelegate {
-  func vendorWillSelect(_ vendor: VendorUsingDelegates)
-  func vendorDidSelect(_ vendor: VendorUsingDelegates,
-                       number: Int)
+public protocol VendorDelegate: AnyObject {
+  func vendorWillSelect(_ vendor: DelegatingVendor)
+  func vendor(_ vendor: DelegatingVendor,
+              didSelect number: Int)
 }

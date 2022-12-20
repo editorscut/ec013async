@@ -1,10 +1,12 @@
-class LocalVendorUsingClosures {
+public class ClosureBasedVendor {
   private var number = 0
+  public init() {  }
 }
 
-extension LocalVendorUsingClosures {
+extension ClosureBasedVendor {
   @MainActor
-  func randomNumber(completion: @escaping (Int, Bool) -> ()) {
+  public func selectRandomNumber(with completion:
+                                 @escaping (Int, Bool) -> Void) {
     Task {
       let numberBeforeChange = number
       try? await Task.sleep(for: .seconds(0.5))
@@ -14,3 +16,5 @@ extension LocalVendorUsingClosures {
     }
   }
 }
+
+

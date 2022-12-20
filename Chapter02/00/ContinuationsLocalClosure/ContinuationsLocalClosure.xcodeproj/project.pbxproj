@@ -14,7 +14,7 @@
 		620672AE29452CCA00357998 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620672AD29452CCA00357998 /* Entry.swift */; };
 		620672B029452CDE00357998 /* MultipleOfFiveError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620672AF29452CDE00357998 /* MultipleOfFiveError.swift */; };
 		620672B229452CF900357998 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620672B129452CF900357998 /* EntryController.swift */; };
-		620672B429452D1C00357998 /* LocalVendorUsingClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620672B329452D1C00357998 /* LocalVendorUsingClosures.swift */; };
+		620672B429452D1C00357998 /* ClosureBasedVendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620672B329452D1C00357998 /* ClosureBasedVendor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,7 @@
 		620672AD29452CCA00357998 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		620672AF29452CDE00357998 /* MultipleOfFiveError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleOfFiveError.swift; sourceTree = "<group>"; };
 		620672B129452CF900357998 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
-		620672B329452D1C00357998 /* LocalVendorUsingClosures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalVendorUsingClosures.swift; sourceTree = "<group>"; };
+		620672B329452D1C00357998 /* ClosureBasedVendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureBasedVendor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				620672B129452CF900357998 /* EntryController.swift */,
-				620672B329452D1C00357998 /* LocalVendorUsingClosures.swift */,
+				620672B329452D1C00357998 /* ClosureBasedVendor.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 			files = (
 				620672AE29452CCA00357998 /* Entry.swift in Sources */,
 				620672B029452CDE00357998 /* MultipleOfFiveError.swift in Sources */,
-				620672B429452D1C00357998 /* LocalVendorUsingClosures.swift in Sources */,
+				620672B429452D1C00357998 /* ClosureBasedVendor.swift in Sources */,
 				620672B229452CF900357998 /* EntryController.swift in Sources */,
 				6206729E29452BFE00357998 /* MainView.swift in Sources */,
 				6206729C29452BFE00357998 /* ContinuationsLocalClosureApp.swift in Sources */,
