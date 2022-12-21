@@ -9,7 +9,7 @@ struct SleepingEntryVendor  {
 
 extension SleepingEntryVendor {
   private func imageName(for int: Int) -> String {
-    let number = int % 50
+    let number = int % 51
     return "\(number).circle"
   }
 }

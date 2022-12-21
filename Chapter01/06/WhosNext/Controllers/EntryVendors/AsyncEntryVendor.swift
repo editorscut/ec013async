@@ -15,7 +15,7 @@ extension AsyncEntryVendor {
     if int.isMultiple(of: 5) {
       throw MultipleOfFiveError(number: int)
     }
-    let number = int % 50
+    let number = int % 51
     return await number.description + suffix()
   }
 }

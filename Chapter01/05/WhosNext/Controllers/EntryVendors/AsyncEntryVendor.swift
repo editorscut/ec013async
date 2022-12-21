@@ -7,7 +7,7 @@ struct AsyncEntryVendor  {
 
 extension AsyncEntryVendor {
   private func imageName(for int: Int) async -> String {
-    let number = int % 50
+    let number = int % 51
     try? await Task.sleep(for:
                           .seconds(Int.random(in: 2...6)))
     return "\(number).circle"

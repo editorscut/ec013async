@@ -2,7 +2,8 @@ import SwiftUI
 
 struct EntryGrid {
   let entries: [Entry]
-  private let columns = [GridItem(.adaptive(minimum: 50,                               maximum: 80))]
+  private let columns = [GridItem(.adaptive(minimum: 50,
+                                            maximum: 80))]
 }
 
 extension EntryGrid: View {
@@ -13,7 +14,7 @@ extension EntryGrid: View {
           Image(systemName: entry.imageName)
             .resizable()
             .scaledToFit()
-            .foregroundColor(entry == Entry.errorEntry ? .red : .primary)
+            .foregroundColor(entry == errorEntry() ? .red : .primary)
         }
       }
     }
