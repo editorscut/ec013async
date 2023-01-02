@@ -17,7 +17,7 @@
 		62DB238E295630B80013CECC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62DB238D295630B80013CECC /* Preview Assets.xcassets */; };
 		62DB239A29563A960013CECC /* NotificationPoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB239929563A960013CECC /* NotificationPoster.swift */; };
 		62DB239C29563AA20013CECC /* NotificationReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB239B29563AA20013CECC /* NotificationReceiver.swift */; };
-		62DB239E29563AB10013CECC /* NotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB239D29563AB10013CECC /* NotificationConstants.swift */; };
+		62DB239E29563AB10013CECC /* NextNumberNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB239D29563AB10013CECC /* NextNumberNotification.swift */; };
 		62DB23A029563AC60013CECC /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB239F29563AC60013CECC /* EntryController.swift */; };
 		62DB23A229563AF10013CECC /* EntryGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB23A129563AF10013CECC /* EntryGrid.swift */; };
 		62DB23A429563AFA0013CECC /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB23A329563AFA0013CECC /* NextButton.swift */; };
@@ -37,7 +37,7 @@
 		62DB238D295630B80013CECC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		62DB239929563A960013CECC /* NotificationPoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPoster.swift; sourceTree = "<group>"; };
 		62DB239B29563AA20013CECC /* NotificationReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationReceiver.swift; sourceTree = "<group>"; };
-		62DB239D29563AB10013CECC /* NotificationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationConstants.swift; sourceTree = "<group>"; };
+		62DB239D29563AB10013CECC /* NextNumberNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextNumberNotification.swift; sourceTree = "<group>"; };
 		62DB239F29563AC60013CECC /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 		62DB23A129563AF10013CECC /* EntryGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryGrid.swift; sourceTree = "<group>"; };
 		62DB23A329563AFA0013CECC /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 			children = (
 				62DB239929563A960013CECC /* NotificationPoster.swift */,
 				62DB239B29563AA20013CECC /* NotificationReceiver.swift */,
-				62DB239D29563AB10013CECC /* NotificationConstants.swift */,
+				62DB239D29563AB10013CECC /* NextNumberNotification.swift */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -237,7 +237,7 @@
 				62BC8E88295F631B00849207 /* IntPublisher.swift in Sources */,
 				62DB2389295630B70013CECC /* MainView.swift in Sources */,
 				62DB23AA29563B1F0013CECC /* Entry.swift in Sources */,
-				62DB239E29563AB10013CECC /* NotificationConstants.swift in Sources */,
+				62DB239E29563AB10013CECC /* NextNumberNotification.swift in Sources */,
 				62BC8E86295F631200849207 /* CombineReceiver.swift in Sources */,
 				62DB23A429563AFA0013CECC /* NextButton.swift in Sources */,
 				62DB2387295630B70013CECC /* SmoreApp.swift in Sources */,

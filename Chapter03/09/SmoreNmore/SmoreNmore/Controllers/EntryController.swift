@@ -3,6 +3,7 @@ import Combine
 @MainActor
 class EntryController: ObservableObject {
   @Published private(set) var entries: [Entry] = []
+  @Published private(set) var entries2: [Entry] = []
   @Published private(set) var entryPairs: [EntryPair] = []
   
   private let plain = AutoEntryVendor(delay: 2.0)
@@ -11,18 +12,24 @@ class EntryController: ObservableObject {
   
   init() {
     Task {
-      await listenForEntryPairs()
+      await listenForEntries()
+    }
+    Task {
+      await listenForEntries2()
     }
   }
 }
-
-import AsyncAlgorithms
 
 extension EntryController {
-  private func listenForEntryPairs() async {
-    for await pair in combineLatest(plain.entries,
-                                    filled.entries) {
-      entryPairs.append(EntryPair(pair))
+  private func listenForEntries() async {
+    for await entry in plain.entries {
+      entries.append(entry)
+    }
+  }
+  private func listenForEntries2() async {
+    for await entry in filled.entries {
+      entries2.append(entry)
     }
   }
 }
+

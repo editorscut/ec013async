@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6235CF4929638BEC00E9F482 /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 6235CF4829638BEC00E9F482 /* AsyncAlgorithms */; };
 		62677A0C295F7A6000F29E93 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62677A0B295F7A6000F29E93 /* Entry.swift */; };
 		62677A0E295F7A9B00F29E93 /* EntryPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62677A0D295F7A9B00F29E93 /* EntryPair.swift */; };
 		62677A10295F7BB800F29E93 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62677A0F295F7BB800F29E93 /* EntryController.swift */; };
@@ -38,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6235CF4929638BEC00E9F482 /* AsyncAlgorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +135,9 @@
 			dependencies = (
 			);
 			name = SmoreNmore;
+			packageProductDependencies = (
+				6235CF4829638BEC00E9F482 /* AsyncAlgorithms */,
+			);
 			productName = SmoreNmore;
 			productReference = 62BC8EC4295F790300849207 /* SmoreNmore.app */;
 			productType = "com.apple.product-type.application";
@@ -161,6 +166,9 @@
 				Base,
 			);
 			mainGroup = 62BC8EBB295F790300849207;
+			packageReferences = (
+				6235CF4729638BEC00E9F482 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */,
+			);
 			productRefGroup = 62BC8EC5295F790300849207 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -395,6 +403,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6235CF4729638BEC00E9F482 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-async-algorithms";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6235CF4829638BEC00E9F482 /* AsyncAlgorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6235CF4729638BEC00E9F482 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */;
+			productName = AsyncAlgorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 62BC8EBC295F790300849207 /* Project object */;
 }
