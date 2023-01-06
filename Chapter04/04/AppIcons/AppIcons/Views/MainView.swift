@@ -7,7 +7,7 @@ struct MainView {
 extension MainView: View {
   var body: some View {
     VStack {
-      SearchField {term in appStore.search(for: term)}
+      SearchField(appStore: appStore)
       IconGrid(appStore: appStore)
     }
     .padding()

@@ -1,14 +1,14 @@
 import SwiftUI
 
 struct MainView {
-  @StateObject private var appStore = AppStore()
+  @State private var apps = [AppInfo]()
 }
 
 extension MainView: View {
   var body: some View {
     VStack {
-      SearchField(appStore: appStore)
-      IconGrid(appStore: appStore)
+      SearchField(apps: $apps)
+      AsyncImageGrid(apps: apps)
     }
     .padding()
   }

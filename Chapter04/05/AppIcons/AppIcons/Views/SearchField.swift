@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct SearchField {
-  let search: (String) -> Void
+  let appStore: AppStore
   @State private var searchTerm = ""
 }
 
@@ -10,7 +10,7 @@ extension SearchField: View {
     TextField("Enter Search Term",
               text: $searchTerm)
     .onSubmit {
-      search(searchTerm)
+      appStore.search(for: searchTerm)
     }
     .multilineTextAlignment(.center)
     .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -20,6 +20,6 @@ extension SearchField: View {
 
 struct SearchField_Previews: PreviewProvider {
   static var previews: some View {
-    SearchField(search: {_ in})
+    SearchField(appStore: AppStore())
   }
 }
