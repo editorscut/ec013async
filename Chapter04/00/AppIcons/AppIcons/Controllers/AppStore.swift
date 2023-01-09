@@ -3,7 +3,7 @@ import Combine
 import UIKit.UIImage
 
 class AppStore: ObservableObject {
-  private(set) var apps = [AppInfo]()
+  @Published private(set) var apps = [AppInfo]()
   @Published private(set) var images = [String: UIImage]()
 }
 

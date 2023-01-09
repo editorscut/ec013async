@@ -18,7 +18,7 @@
 		62E71D0D2965215F0099CC8D /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E71D0C2965215F0099CC8D /* AppInfo.swift */; };
 		62E71D0F2965216C0099CC8D /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E71D0E2965216C0099CC8D /* SearchResults.swift */; };
 		62E71D11296521800099CC8D /* iTunesURLSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E71D10296521800099CC8D /* iTunesURLSupport.swift */; };
-		62E71D1929677BF30099CC8D /* AsyncImageGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E71D1829677BF30099CC8D /* AsyncImageGrid.swift */; };
+		62E71D1729677BD30099CC8D /* AsyncImageGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E71D1629677BD30099CC8D /* AsyncImageGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 		62E71D0C2965215F0099CC8D /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		62E71D0E2965216C0099CC8D /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 		62E71D10296521800099CC8D /* iTunesURLSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesURLSupport.swift; sourceTree = "<group>"; };
-		62E71D1829677BF30099CC8D /* AsyncImageGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageGrid.swift; sourceTree = "<group>"; };
+		62E71D1629677BD30099CC8D /* AsyncImageGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 				62E71D04296517980099CC8D /* IconView.swift */,
 				62E71D06296519A80099CC8D /* SearchField.swift */,
 				62E71D0A29651F2E0099CC8D /* IconGrid.swift */,
-				62E71D1829677BF30099CC8D /* AsyncImageGrid.swift */,
+				62E71D1629677BD30099CC8D /* AsyncImageGrid.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 				62E71D11296521800099CC8D /* iTunesURLSupport.swift in Sources */,
 				62E71D05296517980099CC8D /* IconView.swift in Sources */,
 				62E71D07296519A80099CC8D /* SearchField.swift in Sources */,
-				62E71D1929677BF30099CC8D /* AsyncImageGrid.swift in Sources */,
+				62E71D1729677BD30099CC8D /* AsyncImageGrid.swift in Sources */,
 				62E71CF3296515AC0099CC8D /* AppIconsApp.swift in Sources */,
 				62E71D0F2965216C0099CC8D /* SearchResults.swift in Sources */,
 				62E71D0D2965215F0099CC8D /* AppInfo.swift in Sources */,
