@@ -1,6 +1,9 @@
 import Foundation
 
 class CombineReceiver {
+  static let shared = CombineReceiver()
+  private init() {}
+  
   let entries
   = NotificationCenter.default
     .notifications(named: NextNumberNotification.name)

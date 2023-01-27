@@ -8,20 +8,18 @@ class AutoEntryVendor {
     self.delay = delay
     self.isFilled = isFilled
   }
-}
-
-extension AutoEntryVendor {
-  var entries: AsyncStream<Entry> {
-    AsyncStream(Entry.self) { continuation in
-      Task {
-        while count < 10 {
-          count += 1
-          try? await Task.sleep(for: .seconds(delay))
-          continuation.yield(Entry(number: count,
-                                   isFilled: isFilled))
-        }
-        continuation.finish()
+  
+  lazy private(set) var entries
+  = AsyncStream(Entry.self) { continuation in
+    Task {
+      while count < 10 {
+        count += 1
+        try? await Task.sleep(for: .seconds(delay))
+        continuation.yield(Entry(number: count,
+                                 isFilled: isFilled))
       }
+      continuation.finish()
     }
   }
 }
+

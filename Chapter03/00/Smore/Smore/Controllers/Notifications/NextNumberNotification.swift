@@ -4,8 +4,8 @@ enum NextNumberNotification {}
 
 extension NextNumberNotification {
   
-  public static var name = Notification.Name("nextNumberNotification")
+  public static let name = Notification.Name("nextNumberNotification")
   
-  public static var numberKey
+  public static let numberKey
   = "NextNumberNotificationUserInfoDictionaryNumberKey"
 }

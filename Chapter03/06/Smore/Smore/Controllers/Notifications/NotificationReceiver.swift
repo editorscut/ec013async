@@ -1,13 +1,14 @@
 import Foundation
 
-class NotificationReceiver {  
+class NotificationReceiver {
+  static let shared = NotificationReceiver()
+  private init() {}
+  
   let entries
   = NotificationCenter.default
-    .notifications(named: NextNumberNotification.name)
-    .compactMap(\.userInfo)
-    .compactMap { dictionary in
-      dictionary[NextNumberNotification.numberKey] as? Int
+    .notifications(named: NextNumberNotification.name)    .compactMap(\.userInfo)
+    .compactMap { userInfo in
+      userInfo[NextNumberNotification.numberKey] as? Int
     }
-    .map {number in Entry(number: number)}
+    .map { number in Entry(number: number)}
 }
-

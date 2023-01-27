@@ -1,5 +1,7 @@
 class StreamProvider {
-  static var shared = StreamProvider()
+  static let shared = StreamProvider()
+  private init() {}
+  
   private(set) var count = 0
   
   func selectNextNumber() {

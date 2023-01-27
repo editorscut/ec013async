@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		62A5DE63295E0919004F5D29 /* IntPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A5DE62295E0919004F5D29 /* IntPublisher.swift */; };
-		62A5DE65295E0931004F5D29 /* CombineReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A5DE64295E0931004F5D29 /* CombineReceiver.swift */; };
-		62A5DE67295E0950004F5D29 /* AsyncSequenceOfEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A5DE66295E0950004F5D29 /* AsyncSequenceOfEntries.swift */; };
-		62A5DE6A295E4BD9004F5D29 /* StreamProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A5DE69295E4BD9004F5D29 /* StreamProvider.swift */; };
+		62BC8EAA295F65AB00849207 /* IntPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC8EA9295F65AB00849207 /* IntPublisher.swift */; };
+		62BC8EAC295F65B500849207 /* CombineReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC8EAB295F65B500849207 /* CombineReceiver.swift */; };
+		62BC8EAE295F65C100849207 /* AsyncSequenceOfEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC8EAD295F65C100849207 /* AsyncSequenceOfEntries.swift */; };
+		62BC8EB0295F65CA00849207 /* StreamProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC8EAF295F65CA00849207 /* StreamProvider.swift */; };
 		62DB2387295630B70013CECC /* SmoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB2386295630B70013CECC /* SmoreApp.swift */; };
 		62DB2389295630B70013CECC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB2388295630B70013CECC /* MainView.swift */; };
 		62DB238B295630B80013CECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62DB238A295630B80013CECC /* Assets.xcassets */; };
@@ -26,10 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		62A5DE62295E0919004F5D29 /* IntPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntPublisher.swift; sourceTree = "<group>"; };
-		62A5DE64295E0931004F5D29 /* CombineReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineReceiver.swift; sourceTree = "<group>"; };
-		62A5DE66295E0950004F5D29 /* AsyncSequenceOfEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSequenceOfEntries.swift; sourceTree = "<group>"; };
-		62A5DE69295E4BD9004F5D29 /* StreamProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamProvider.swift; sourceTree = "<group>"; };
+		62BC8EA9295F65AB00849207 /* IntPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntPublisher.swift; sourceTree = "<group>"; };
+		62BC8EAB295F65B500849207 /* CombineReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineReceiver.swift; sourceTree = "<group>"; };
+		62BC8EAD295F65C100849207 /* AsyncSequenceOfEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSequenceOfEntries.swift; sourceTree = "<group>"; };
+		62BC8EAF295F65CA00849207 /* StreamProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamProvider.swift; sourceTree = "<group>"; };
 		62DB2383295630B70013CECC /* Smore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DB2386295630B70013CECC /* SmoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoreApp.swift; sourceTree = "<group>"; };
 		62DB2388295630B70013CECC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -56,22 +56,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		62A5DE61295E08FF004F5D29 /* Combine */ = {
+		62BC8EA7295F658E00849207 /* Streams */ = {
 			isa = PBXGroup;
 			children = (
-				62A5DE62295E0919004F5D29 /* IntPublisher.swift */,
-				62A5DE64295E0931004F5D29 /* CombineReceiver.swift */,
-				62A5DE66295E0950004F5D29 /* AsyncSequenceOfEntries.swift */,
-			);
-			path = Combine;
-			sourceTree = "<group>";
-		};
-		62A5DE68295E4B8A004F5D29 /* Streams */ = {
-			isa = PBXGroup;
-			children = (
-				62A5DE69295E4BD9004F5D29 /* StreamProvider.swift */,
+				62BC8EAF295F65CA00849207 /* StreamProvider.swift */,
 			);
 			path = Streams;
+			sourceTree = "<group>";
+		};
+		62BC8EA8295F659500849207 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				62BC8EA9295F65AB00849207 /* IntPublisher.swift */,
+				62BC8EAB295F65B500849207 /* CombineReceiver.swift */,
+				62BC8EAD295F65C100849207 /* AsyncSequenceOfEntries.swift */,
+			);
+			path = Combine;
 			sourceTree = "<group>";
 		};
 		62DB237A295630B70013CECC = {
@@ -114,8 +114,8 @@
 			children = (
 				62DB239F29563AC60013CECC /* EntryController.swift */,
 				62DB239829563A7D0013CECC /* Notifications */,
-				62A5DE61295E08FF004F5D29 /* Combine */,
-				62A5DE68295E4B8A004F5D29 /* Streams */,
+				62BC8EA8295F659500849207 /* Combine */,
+				62BC8EA7295F658E00849207 /* Streams */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -230,13 +230,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				62DB23A029563AC60013CECC /* EntryController.swift in Sources */,
-				62A5DE63295E0919004F5D29 /* IntPublisher.swift in Sources */,
-				62A5DE65295E0931004F5D29 /* CombineReceiver.swift in Sources */,
-				62A5DE67295E0950004F5D29 /* AsyncSequenceOfEntries.swift in Sources */,
 				62DB239A29563A960013CECC /* NotificationPoster.swift in Sources */,
+				62BC8EAC295F65B500849207 /* CombineReceiver.swift in Sources */,
+				62BC8EAA295F65AB00849207 /* IntPublisher.swift in Sources */,
 				62DB23AC29563B290013CECC /* MultipleOfFiveError.swift in Sources */,
-				62A5DE6A295E4BD9004F5D29 /* StreamProvider.swift in Sources */,
 				62DB239C29563AA20013CECC /* NotificationReceiver.swift in Sources */,
+				62BC8EB0295F65CA00849207 /* StreamProvider.swift in Sources */,
+				62BC8EAE295F65C100849207 /* AsyncSequenceOfEntries.swift in Sources */,
 				62DB23A229563AF10013CECC /* EntryGrid.swift in Sources */,
 				62DB2389295630B70013CECC /* MainView.swift in Sources */,
 				62DB23AA29563B1F0013CECC /* Entry.swift in Sources */,

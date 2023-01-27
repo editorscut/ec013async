@@ -49,11 +49,11 @@ extension AppStore {
           = ephemeralURLSession
             .data(from: app.artworkURL)
           let image = UIImage(data: try await imageData)
+          ProgressMonitor.shared.registerCompletedDownload()
           return (image, app.name)
         }
       }
       for try await (image, name) in group {
-        ProgressMonitor.shared.registerCompletedDownload()
         publish(image: image,
                 forAppNamed: name)
       }

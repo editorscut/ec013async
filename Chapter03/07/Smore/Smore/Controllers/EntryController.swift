@@ -3,7 +3,7 @@ import Combine
 @MainActor
 class EntryController: ObservableObject {
   @Published private(set) var entries: [Entry] = []
-  private let receiver = CombineReceiver()
+  private let receiver = CombineReceiver.shared
   
   init() {
     Task {

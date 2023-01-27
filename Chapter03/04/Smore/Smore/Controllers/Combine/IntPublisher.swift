@@ -1,7 +1,9 @@
 import Combine
 
 class IntPublisher {
-  static var shared = IntPublisher()
+  static let shared = IntPublisher()
+  private init() {}
+  
   private(set) var count = 0
 
   func selectNextNumber() {
