@@ -11,7 +11,7 @@ extension AsyncImageGrid: View {
     ScrollView {
       LazyVGrid(columns: columns) {
         ForEach(apps) { app in
-          AsyncImage(url: app.artworkURL) {image in
+          AsyncImage(url: app.artworkURL) { image in
             image
               .resizable()
               .scaledToFit()

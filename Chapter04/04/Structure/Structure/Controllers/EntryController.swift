@@ -28,13 +28,13 @@ extension EntryController {
         plainEntry = Entry(number: try await plainTask.value)
         filledEntry = Entry(number: try await filledTask.value,
                             isFilled: true)
-      } catch {
+      }
+      catch {
         print(error)
       }
     }
   }
 }
-
 
 extension EntryController {
   private func clear() {
@@ -44,3 +44,4 @@ extension EntryController {
     comparison = nil
   }
 }
+

@@ -1,5 +1,7 @@
+import Foundation
+
 struct NumberVendor {
-  let delay: Double
+  let delay: TimeInterval
   
   func randomNumber() async throws -> Int {
     try await Task.sleep(for: .seconds(delay))

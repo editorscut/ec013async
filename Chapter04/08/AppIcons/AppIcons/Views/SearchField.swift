@@ -18,9 +18,8 @@ extension SearchField: View {
   }
 }
 
-
 extension SearchField {
-  private func search()  {
+  private func search() {
     apps.removeAll()
     Task {
       do {
@@ -28,8 +27,9 @@ extension SearchField {
         = try await ephemeralURLSession
           .data(from: url(for: searchTerm))
         let searchResults
-        = try JSONDecoder().decode(SearchResults.self,
-                                   from: data)
+        = try JSONDecoder()
+          .decode(SearchResults.self,
+                  from: data)
         apps = searchResults.apps
       } catch {
         print(error)

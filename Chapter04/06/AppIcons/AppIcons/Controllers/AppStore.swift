@@ -9,21 +9,22 @@ class AppStore: ObservableObject {
 }
 
 extension AppStore {
-  func search(for rawText: String) {
+  func search(for rawText: String)  {
     Task {
       do {
         apps = try await retrieveApps(for: rawText)
         print(apps)
         try await retrieveImages()
       } catch {
-        print(error)
+        print(error.localizedDescription)
       }
     }
   }
 }
 
 extension AppStore {
-  private func retrieveApps(for rawText: String) async throws -> [AppInfo] {
+  private func retrieveApps(for rawText: String)
+                                 async throws -> [AppInfo] {
     let (data, _)
     = try await ephemeralURLSession
       .data(from: url(for: rawText))
@@ -36,11 +37,11 @@ extension AppStore {
 
 extension AppStore {
   private func retrieveImages() async throws {
-    try await withThrowingTaskGroup(of: Void.self) { group in
+    await withThrowingTaskGroup(of: Void.self) { group in
       for app in apps {
         group.addTask {
           async let (imageData, _)
-          = ephemeralURLSession
+          = try await ephemeralURLSession
             .data(from: app.artworkURL)
           let image = UIImage(data: try await imageData)
           await self.publish(image: image,
