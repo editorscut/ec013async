@@ -6,29 +6,28 @@ import UIKit.UIImage
 class AppStore: ObservableObject {
   @Published private(set) var apps = [AppInfo]()
   @Published private(set) var images = [String: UIImage]()
-  private var downloadTask: Task<Void, Never>? {
-    willSet {
-      resetForNewSearch()
-    }
-  }
+  private var downloadTask: Task<Void, Never>?
+  private var monitor: ProgressMonitor?
 }
 
 extension AppStore {
-  func search(for rawText: String) {
+  func search(for rawText: String)  {
+    resetForSearch(for: rawText)
     downloadTask = Task {
       do {
         apps = try await retrieveApps(for: rawText)
-        ProgressMonitor.shared.resetTotal(to: apps.count)
+        monitor?.reset(total: apps.count)
         try await retrieveImages()
       } catch {
-        print(error)
+        print(error.localizedDescription)
       }
     }
   }
 }
 
 extension AppStore {
-  private func retrieveApps(for rawText: String) async throws -> [AppInfo] {
+  private func retrieveApps(for rawText: String)
+  async throws -> [AppInfo] {
     let (data, _)
     = try await ephemeralURLSession
       .data(from: url(for: rawText))
@@ -41,15 +40,16 @@ extension AppStore {
 
 extension AppStore {
   private func retrieveImages() async throws {
+    guard let monitor = self.monitor else { return }
     try await withThrowingTaskGroup(of: (UIImage?,
-                                         String).self) { group in
+                                     String).self) {group in
       for app in apps {
         group.addTask {
           async let (imageData, _)
-          = ephemeralURLSession
+          = try await ephemeralURLSession
             .data(from: app.artworkURL)
           let image = UIImage(data: try await imageData)
-          ProgressMonitor.shared.registerCompletedDownload()
+          monitor.registerImageDownload()
           return (image, app.name)
         }
       }
@@ -71,9 +71,10 @@ extension AppStore {
 }
 
 extension AppStore {
-  private func resetForNewSearch() {
+  private func resetForSearch(for rawText: String) {
     downloadTask?.cancel()
     apps.removeAll()
     images.removeAll()
+    monitor = ProgressMonitor(for: rawText)
   }
 }

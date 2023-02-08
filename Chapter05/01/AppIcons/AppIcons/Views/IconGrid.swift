@@ -2,8 +2,8 @@ import SwiftUI
 
 struct IconGrid {
   @ObservedObject var appStore: AppStore
-  let columns = [GridItem(.adaptive(minimum: 60,
-                                   maximum: 60))]
+  let columns = [GridItem(.adaptive(minimum: 80,
+                                   maximum: 80))]
 }
 
 extension IconGrid: View {

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		62E3DF54296BBEE000BD2448 /* ProgressMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E3DF53296BBEE000BD2448 /* ProgressMonitor.swift */; };
+		622E481D29887ADA007126DB /* ProgressMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622E481C29887ADA007126DB /* ProgressMonitor.swift */; };
 		62E71CF3296515AC0099CC8D /* AppIconsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E71CF2296515AC0099CC8D /* AppIconsApp.swift */; };
 		62E71CF5296515AC0099CC8D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E71CF4296515AC0099CC8D /* MainView.swift */; };
 		62E71CF7296515AD0099CC8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62E71CF6296515AD0099CC8D /* Assets.xcassets */; };
@@ -19,11 +19,11 @@
 		62E71D0D2965215F0099CC8D /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E71D0C2965215F0099CC8D /* AppInfo.swift */; };
 		62E71D0F2965216C0099CC8D /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E71D0E2965216C0099CC8D /* SearchResults.swift */; };
 		62E71D11296521800099CC8D /* iTunesURLSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E71D10296521800099CC8D /* iTunesURLSupport.swift */; };
-		62E71D1B29677C0A0099CC8D /* AsyncImageGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E71D1A29677C0A0099CC8D /* AsyncImageGrid.swift */; };
+		62E71D1529677BAB0099CC8D /* AsyncImageGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E71D1429677BAB0099CC8D /* AsyncImageGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		62E3DF53296BBEE000BD2448 /* ProgressMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressMonitor.swift; sourceTree = "<group>"; };
+		622E481C29887ADA007126DB /* ProgressMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressMonitor.swift; sourceTree = "<group>"; };
 		62E71CEF296515AC0099CC8D /* AppIcons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppIcons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E71CF2296515AC0099CC8D /* AppIconsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconsApp.swift; sourceTree = "<group>"; };
 		62E71CF4296515AC0099CC8D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -36,7 +36,7 @@
 		62E71D0C2965215F0099CC8D /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		62E71D0E2965216C0099CC8D /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 		62E71D10296521800099CC8D /* iTunesURLSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesURLSupport.swift; sourceTree = "<group>"; };
-		62E71D1A29677C0A0099CC8D /* AsyncImageGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageGrid.swift; sourceTree = "<group>"; };
+		62E71D1429677BAB0099CC8D /* AsyncImageGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				62E71D0829651C770099CC8D /* AppStore.swift */,
-				62E3DF53296BBEE000BD2448 /* ProgressMonitor.swift */,
+				622E481C29887ADA007126DB /* ProgressMonitor.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -101,7 +101,7 @@
 				62E71D04296517980099CC8D /* IconView.swift */,
 				62E71D06296519A80099CC8D /* SearchField.swift */,
 				62E71D0A29651F2E0099CC8D /* IconGrid.swift */,
-				62E71D1A29677C0A0099CC8D /* AsyncImageGrid.swift */,
+				62E71D1429677BAB0099CC8D /* AsyncImageGrid.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,10 +200,10 @@
 				62E71CF5296515AC0099CC8D /* MainView.swift in Sources */,
 				62E71D0929651C770099CC8D /* AppStore.swift in Sources */,
 				62E71D11296521800099CC8D /* iTunesURLSupport.swift in Sources */,
-				62E3DF54296BBEE000BD2448 /* ProgressMonitor.swift in Sources */,
+				622E481D29887ADA007126DB /* ProgressMonitor.swift in Sources */,
 				62E71D05296517980099CC8D /* IconView.swift in Sources */,
 				62E71D07296519A80099CC8D /* SearchField.swift in Sources */,
-				62E71D1B29677C0A0099CC8D /* AsyncImageGrid.swift in Sources */,
+				62E71D1529677BAB0099CC8D /* AsyncImageGrid.swift in Sources */,
 				62E71CF3296515AC0099CC8D /* AppIconsApp.swift in Sources */,
 				62E71D0F2965216C0099CC8D /* SearchResults.swift in Sources */,
 				62E71D0D2965215F0099CC8D /* AppInfo.swift in Sources */,

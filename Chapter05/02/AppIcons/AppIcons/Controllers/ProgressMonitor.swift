@@ -1,17 +1,21 @@
 class ProgressMonitor {
-  static var shared = ProgressMonitor()
+  let searchTerm: String
   private(set) var total = 0
   private(set) var downloaded = 0
+  
+  init(for searchTerm: String) {
+    self.searchTerm = searchTerm
+  }
 }
 
 extension ProgressMonitor {
-  func resetTotal(to numberOfApps: Int) {
-    total = numberOfApps
+  func reset(total: Int) {
+    self.total = total
     downloaded = 0
   }
   
-  func registerCompletedDownload() {
+  func registerImageDownload() {
     downloaded += 1
-    print("Downloaded", downloaded, "/", total)
+    print("downloaded", downloaded, "/", total)
   }
 }
