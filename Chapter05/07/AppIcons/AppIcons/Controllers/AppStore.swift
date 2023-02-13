@@ -17,6 +17,7 @@ extension AppStore {
     downloadTask = Task {
       do {
         apps = try await retrieveApps(for: rawText)
+        await ProgressMonitor.shared.reset()
         try await retrieveImages()
       } catch {
         isUpdating = false

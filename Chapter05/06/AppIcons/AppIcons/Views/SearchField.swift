@@ -2,7 +2,7 @@ import SwiftUI
 
 struct SearchField {
   let appStore: AppStore
-  @State private var searchTerm = ""
+  @Binding var searchTerm: String
 }
 
 extension SearchField: View {
@@ -20,6 +20,7 @@ extension SearchField: View {
 
 struct SearchField_Previews: PreviewProvider {
   static var previews: some View {
-    SearchField(appStore: AppStore())
+    SearchField(appStore: AppStore(),
+                searchTerm: .constant(""))
   }
 }

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="52be8ed1-2308-41da-8dee-c2c6fe37c5cd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../App/TicTacFish/TicTacFish.xcodeproj/xcshareddata/xcschemes/MACAPP.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/.swiftpm/xcode/xcshareddata/xcschemes/TicTacFishServer.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.swiftpm/xcode/xcshareddata/xcschemes/TicTacFishServer.xcscheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/NIO.emit-module.d" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/NIO.emit-module.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/NIOConcurrencyHelpers.emit-module.d" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/NIOConcurrencyHelpers.emit-module.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/NIOCore.emit-module.d" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/NIOCore.emit-module.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/NIOEmbedded.emit-module.d" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/NIOEmbedded.emit-module.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/NIOFoundationCompat.emit-module.d" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/NIOFoundationCompat.emit-module.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/NIOHTTP1.emit-module.d" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/NIOHTTP1.emit-module.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/NIOPosix.emit-module.d" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/NIOPosix.emit-module.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/NIOTLS.emit-module.d" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/NIOTLS.emit-module.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/NIOTransportServices.emit-module.d" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/NIOTransportServices.emit-module.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/NIOWebSocket.emit-module.d" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/NIOWebSocket.emit-module.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/TicTacFishServer.emit-module.d" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/TicTacFishServer.emit-module.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/TicTacFishShared.emit-module.d" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/TicTacFishShared.emit-module.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/_NIODataStructures.emit-module.d" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/_NIODataStructures.emit-module.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.swiftpm/xcode/xcuserdata/ktoso.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/.swiftpm/xcode/xcuserdata/ktoso.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sources/TicTacFishShared/ActorSystems/WebSocket/ChannelHandlers.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/TicTacFishShared/ActorSystems/WebSocket/ChannelHandlers.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sources/TicTacFishShared/ActorSystems/WebSocket/WebSocketActorSystem.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/TicTacFishShared/ActorSystems/WebSocket/WebSocketActorSystem.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sources/TicTacFishShared/ViewModel/GameViewModel.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/TicTacFishShared/ViewModel/GameViewModel.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Workspace.xcworkspace/xcuserdata/ktoso.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../Workspace.xcworkspace/xcuserdata/ktoso.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Workspace.xcworkspace/xcuserdata/ktoso.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/../Workspace.xcworkspace/xcuserdata/ktoso.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/Library/Caches/JetBrains/CLion2021.3/ModuleCache/default/3/5.7/arm64/macosx13.0$macos/Distributed.swiftmodule-7d46b4a2/Distributed.module/Distributed.swift" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2021" />
+    <option name="minorVersion" value="3.4" />
+  </component>
+  <component name="ProjectId" id="28JIwvdJouSq5k0YcVANE7TKtjD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="cf.advertisement.text.overridden" value="true" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicTacFishShared" type="SwiftPackageManagerRunConfiguration" factoryName="Swift Package Run" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Shared" TARGET_NAME="TicTacFishShared" CONFIG_NAME="TicTacFishShared">
+      <method v="2">
+        <option name="SPM.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="52be8ed1-2308-41da-8dee-c2c6fe37c5cd" name="Changes" comment="" />
+      <created>1650928503690</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650928503690</updated>
+    </task>
+    <servers />
+  </component>
+</project>

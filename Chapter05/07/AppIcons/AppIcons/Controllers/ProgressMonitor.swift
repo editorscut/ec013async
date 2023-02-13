@@ -1,7 +1,7 @@
 @globalActor
 actor ProgressMonitor {
   static let shared = ProgressMonitor()
-  private(set) var downloaded = 0
+  var downloaded = 0
 }
 
 
@@ -10,5 +10,9 @@ extension ProgressMonitor {
   func registerImageDownload() -> Int {
     downloaded += 1
     return downloaded
+  }
+  
+  func reset() {
+    downloaded = 0
   }
 }
