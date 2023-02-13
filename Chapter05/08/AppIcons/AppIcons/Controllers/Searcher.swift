@@ -10,6 +10,7 @@ distributed actor Searcher {
        actorSystem: ActorSystem) {
     self.name = name
     self.appStore = appStore
+    // this should be self.actorSystem = actorSystem but I get a crash and don't know why
     self.actorSystem = LocalTestingDistributedActorSystem()
   }
 }
