@@ -10,36 +10,43 @@ class AppStore: ObservableObject {
   @Published private(set) var images = [String: UIImage]()
   @Published private(set) var isUpdating = false
   @Published private(set) var downloadedImages = 0
-  @Published private(set) var searcher: Searcher?
+  private var searcher: Searcher?
   @Published private(set) var otherSearchers: [Searcher] = []
   @Published private(set) var appSearches: [String: String] = [:]
   private var downloadTask: Task<Void, Never>?
-  
-  init() {
-    searcher = Searcher(name: UIDevice.current.name,
-                        appStore: self,
-                        actorSystem: bonjourActorSystem)
-    guard let searcher else {return}
-    bonjourActorSystem.receptionist.checkIn(searcher,
-                                            tag: "App Store Searcher")
+}
+
+extension AppStore {
+  nonisolated
+  func setSearcher(with name: String) {
     Task {
-      try await startLookingForOtherSearchers()
+      let searcher = Searcher(name: name,
+                              appStore: self,
+                              actorSystem: LocalTestingDistributedActorSystem())
+      await MainActor.run {
+        self.searcher = searcher
+      }
     }
   }
 }
 
 extension AppStore {
   func search(for rawText: String)  {
+    if let _ = self.searcher {
+      setSearcher(with: UIDevice.current.name)
+    }
     resetForSearch(for: rawText)
     downloadTask = Task {
       do {
-        try await searcher?.search(for: rawText)
-        apps = try await retrieveApps(for: rawText)
-        await ProgressMonitor.shared.reset()
-        try await retrieveImages()
+        try await Tracker.$searchTerm.withValue(rawText) {
+          apps = try await retrieveApps(for: rawText)
+          try await Tracker.$totalImages.withValue(apps.count) {
+            await ProgressMonitor.shared.reset()
+            try await retrieveImages()
+          }
+        }
       } catch {
         isUpdating = false
-        print(error.localizedDescription)
       }
     }
   }
@@ -65,14 +72,16 @@ extension AppStore {
                                          String).self) {group in
       for app in apps {
         group.addTask { @ProgressMonitor in
-          async let (imageData, _)
-          = try await ephemeralURLSession
-            .data(from: app.artworkURL)
-          let image = UIImage(data: try await imageData)
-          let numberDownloaded
-          = await ProgressMonitor.shared.registerImageDownload()
-          await self.setDownloadedImages(to: numberDownloaded)
-          return (image, app.name)
+          try await Tracker.$appName.withValue(app.name) {
+            async let (imageData, _)
+            = try await ephemeralURLSession
+              .data(from: app.artworkURL)
+            let image = UIImage(data: try await imageData)
+            let numberDownloaded
+            = await ProgressMonitor.shared.registerImageDownload()
+            await self.setDownloadedImages(to: numberDownloaded)
+            return (image, app.name)
+          }
         }
       }
       for try await (image, name) in group {
@@ -116,24 +125,3 @@ extension AppStore {
 }
 
 
-extension AppStore {
-  func startLookingForOtherSearchers() async throws {
-    let listing
-    = await bonjourActorSystem.receptionist
-      .listing(of: Searcher.self,
-               tag: "App Store Searcher")
-    guard let searcher = self.searcher else {return}
-    
-    for try await otherSearcher in listing
-                     where otherSearcher.id != searcher.id {
-      otherSearchers.append(otherSearcher)
-    }
-  }
-}
-
-extension AppStore {
-  func addSearch(for searchTerm: String,
-                 by searcherName: String) {
-    appSearches[searcherName] = searchTerm
-  }
-}
