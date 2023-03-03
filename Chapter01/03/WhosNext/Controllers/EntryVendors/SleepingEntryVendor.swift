@@ -11,7 +11,7 @@ extension SleepingEntryVendor {
   private func imageName(for int: Int) -> String {
     let number = int % 51
     Thread.sleep(forTimeInterval:
-                   TimeInterval.random(in: 2...6))
+                  TimeInterval.random(in: 2...6))
     return "\(number).circle"
   }
 }

@@ -13,3 +13,4 @@ extension AsyncEntryVendor {
     return "\(number).circle"
   }
 }
+

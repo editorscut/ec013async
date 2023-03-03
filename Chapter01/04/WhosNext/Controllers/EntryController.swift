@@ -9,8 +9,8 @@ class EntryController: ObservableObject {
 
 extension EntryController {
   func next() {
-      count += 1
-      let entriesCopy = entries
+    count += 1
+    let entriesCopy = entries
     Task {
       let newEntry = await vendor.entry(for: count)
       entries = entriesCopy + [newEntry]

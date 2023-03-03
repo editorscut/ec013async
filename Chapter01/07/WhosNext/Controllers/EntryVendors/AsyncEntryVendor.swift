@@ -1,4 +1,4 @@
-struct AsyncEntryVendor {
+struct AsyncEntryVendor  {
   func entry(for count: Int) async -> Entry {
     do {
       let imageName = try await imageName(for: count)
@@ -19,8 +19,9 @@ extension AsyncEntryVendor {
   }
 }
 
-func suffix() async -> String {
+fileprivate func suffix() async -> String {
   try? await Task.sleep(for:
-                        .seconds(Int.random(in: 2...6)))
+      .seconds(Int.random(in: 2...6)))
   return ".circle"
 }
+

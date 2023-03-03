@@ -29,7 +29,8 @@ final class WhosNextTests: XCTestCase {
       let _ = try await vendor.imageName(for: 5)
       XCTFail("Expected MultipleOfFiveError")
     } catch {
-      XCTAssertEqual(error is MultipleOfFiveError, true)
+      XCTAssertTrue(error is MultipleOfFiveError)
     }
   }
+  
 }

@@ -4,9 +4,10 @@ struct ErrorEntryVendor  {
       let imageName = try imageName(for: count)
       return Entry(imageName: imageName)
     } catch {
-      print(error)
+      print(error.localizedDescription)
       return errorEntry()
     }
+    
   }
 }
 
