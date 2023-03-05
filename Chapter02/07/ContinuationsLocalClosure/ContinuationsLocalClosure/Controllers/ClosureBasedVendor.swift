@@ -3,7 +3,7 @@ class ClosureBasedVendor {
 }
 
 extension ClosureBasedVendor {
-  func selectRandomNumber() async -> (Int, Bool) {
+  func randomNumber() async -> (Int, Bool) {
     let numberBeforeChange = number
     try? await Task.sleep(for: .seconds(0.5))
     number = Int.random(in: 1...50)

@@ -8,7 +8,7 @@ class EntryController: ObservableObject {
   @Published private(set) var delta = "..."
   let suffix = ".circle"
   lazy private var numberVendor
-    = DelegatingVendor(delegate: self)
+  = DelegatingVendor(delegate: self)
 }
 
 extension EntryController {

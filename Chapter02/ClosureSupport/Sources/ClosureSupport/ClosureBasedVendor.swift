@@ -4,7 +4,6 @@ public class ClosureBasedVendor {
 }
 
 extension ClosureBasedVendor {
-  @MainActor
   public func selectRandomNumber(with completion:
                                  @escaping (Int, Bool) -> Void) {
     Task {

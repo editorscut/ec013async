@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		625968D62947ED3300DFD799 /* UnexpectedDataFromServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625968D52947ED3300DFD799 /* UnexpectedDataFromServerError.swift */; };
+		62BF088D2947F5B1009ADF0B /* UnexpectedDataFromServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BF088C2947F5B1009ADF0B /* UnexpectedDataFromServerError.swift */; };
 		62E203C82947A07E00E5B488 /* ContinuationsURLSessionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E203C72947A07E00E5B488 /* ContinuationsURLSessionApp.swift */; };
 		62E203CA2947A07E00E5B488 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E203C92947A07E00E5B488 /* MainView.swift */; };
 		62E203CC2947A07F00E5B488 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62E203CB2947A07F00E5B488 /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		625968D52947ED3300DFD799 /* UnexpectedDataFromServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnexpectedDataFromServerError.swift; sourceTree = "<group>"; };
+		62BF088C2947F5B1009ADF0B /* UnexpectedDataFromServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnexpectedDataFromServerError.swift; sourceTree = "<group>"; };
 		62E203C42947A07E00E5B488 /* ContinuationsURLSession.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContinuationsURLSession.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E203C72947A07E00E5B488 /* ContinuationsURLSessionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuationsURLSessionApp.swift; sourceTree = "<group>"; };
 		62E203C92947A07E00E5B488 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 			children = (
 				62E203DB2947A15200E5B488 /* Entry.swift */,
 				62E203DD2947A16A00E5B488 /* MultipleOfFiveError.swift */,
-				625968D52947ED3300DFD799 /* UnexpectedDataFromServerError.swift */,
+				62BF088C2947F5B1009ADF0B /* UnexpectedDataFromServerError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -189,10 +189,10 @@
 			files = (
 				62E203E02947A18000E5B488 /* EntryController.swift in Sources */,
 				62E203DC2947A15200E5B488 /* Entry.swift in Sources */,
-				625968D62947ED3300DFD799 /* UnexpectedDataFromServerError.swift in Sources */,
 				62E203D62947A09D00E5B488 /* URLConstants.swift in Sources */,
 				62E203CA2947A07E00E5B488 /* MainView.swift in Sources */,
 				62E203E22947A1A000E5B488 /* VendorUsingURLSession.swift in Sources */,
+				62BF088D2947F5B1009ADF0B /* UnexpectedDataFromServerError.swift in Sources */,
 				62E203C82947A07E00E5B488 /* ContinuationsURLSessionApp.swift in Sources */,
 				62E203DE2947A16A00E5B488 /* MultipleOfFiveError.swift in Sources */,
 			);

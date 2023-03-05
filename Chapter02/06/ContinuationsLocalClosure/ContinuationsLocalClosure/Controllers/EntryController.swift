@@ -11,12 +11,13 @@ class EntryController: ObservableObject {
 
 extension EntryController {
   func next() {
+    guard !isUpdating else { return }
     isUpdating = true
     vendor.selectRandomNumber {number, isGreater in
-      self.entry = Entry(imageName: number.description + self.suffix)
+      self.entry
+      = Entry(imageName: number.description + self.suffix)
       self.delta = isGreater ? "+" : "-"
       self.isUpdating = false
     }
   }
 }
-

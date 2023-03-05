@@ -37,7 +37,7 @@ extension ToolDemo {
 }
 
 extension ToolDemo {
-  func demo4(completion: @escaping (Int, Bool) -> Void) {
+  func demo4(completion: @escaping (Int, Bool) -> ()) {
     Task {
       let numberBeforeChange = number
       try? await Task.sleep(for: .seconds(0.5))

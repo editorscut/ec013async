@@ -11,13 +11,17 @@ class EntryController: ObservableObject {
 
 extension EntryController {
   func next() {
+    guard !isUpdating else {return}
     Task {
-      await wrapper.requestRandomEntryNumber()
+      await wrapper.requestRandomNumber()
       isUpdating = true
-      let (number, delta) = await wrapper.receiveRandomEntryNumber()
+      let (number, delta)
+      = await wrapper.receiveRandomNumber()
       entry = Entry(imageName: number.description + suffix)
       self.delta = delta.description
       isUpdating = false
     }
   }
 }
+
+
