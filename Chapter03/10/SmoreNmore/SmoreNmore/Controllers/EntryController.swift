@@ -1,6 +1,6 @@
 import Combine
 import AsyncAlgorithms
-// ...
+
 @MainActor
 class EntryController: ObservableObject {
   @Published private(set) var entries: [Entry] = []
@@ -11,6 +11,9 @@ class EntryController: ObservableObject {
                                        isFilled: true)
   
   init() {
+//    Task {
+//      await listenForEntries()
+//    }
     Task {
       await listenForEntryPairs()
     }
@@ -18,6 +21,11 @@ class EntryController: ObservableObject {
 }
 
 extension EntryController {
+//  private func listenForEntries() async {
+//    for await entry in plain.entries {
+//      entries.append(entry)
+//    }
+//  }
   private func listenForEntryPairs() async {
     for await pair in combineLatest(plain.entries,
                           filled.entries) {

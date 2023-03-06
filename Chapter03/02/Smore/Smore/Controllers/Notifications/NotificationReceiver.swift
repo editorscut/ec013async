@@ -11,11 +11,10 @@ class NotificationReceiver {
   }
   
   lazy private(set) var numbers
-  = AsyncStream(Int.self) {continuation in
-    token = NotificationCenter
-      .default
+  = AsyncStream<Int> { continuation in
+    token = NotificationCenter.default
       .addObserver(forName: NextNumberNotification.name,
-                   object: nil,
+                   object: NotificationPoster.shared,
                    queue: nil) { notification in
         if let userInfo = notification.userInfo,
            let number = userInfo[NextNumberNotification.numberKey]

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		622E481B29845782007126DB /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 622E481A29845782007126DB /* AsyncAlgorithms */; };
+		620FFCF229B5639D007E5784 /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 620FFCF129B5639D007E5784 /* AsyncAlgorithms */; };
 		62677A0C295F7A6000F29E93 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62677A0B295F7A6000F29E93 /* Entry.swift */; };
 		62677A0E295F7A9B00F29E93 /* EntryPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62677A0D295F7A9B00F29E93 /* EntryPair.swift */; };
 		62677A10295F7BB800F29E93 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62677A0F295F7BB800F29E93 /* EntryController.swift */; };
@@ -39,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				622E481B29845782007126DB /* AsyncAlgorithms in Frameworks */,
+				620FFCF229B5639D007E5784 /* AsyncAlgorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +136,7 @@
 			);
 			name = SmoreNmore;
 			packageProductDependencies = (
-				622E481A29845782007126DB /* AsyncAlgorithms */,
+				620FFCF129B5639D007E5784 /* AsyncAlgorithms */,
 			);
 			productName = SmoreNmore;
 			productReference = 62BC8EC4295F790300849207 /* SmoreNmore.app */;
@@ -167,7 +167,7 @@
 			);
 			mainGroup = 62BC8EBB295F790300849207;
 			packageReferences = (
-				622E481929845782007126DB /* XCRemoteSwiftPackageReference "swift-async-algorithms" */,
+				620FFCF029B5639D007E5784 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */,
 			);
 			productRefGroup = 62BC8EC5295F790300849207 /* Products */;
 			projectDirPath = "";
@@ -405,20 +405,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		622E481929845782007126DB /* XCRemoteSwiftPackageReference "swift-async-algorithms" */ = {
+		620FFCF029B5639D007E5784 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-async-algorithms";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.4;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		622E481A29845782007126DB /* AsyncAlgorithms */ = {
+		620FFCF129B5639D007E5784 /* AsyncAlgorithms */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 622E481929845782007126DB /* XCRemoteSwiftPackageReference "swift-async-algorithms" */;
+			package = 620FFCF029B5639D007E5784 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */;
 			productName = AsyncAlgorithms;
 		};
 /* End XCSwiftPackageProductDependency section */

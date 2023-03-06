@@ -6,9 +6,14 @@ class NotificationReceiver {
   
   let entries
   = NotificationCenter.default
-    .notifications(named: NextNumberNotification.name)    .compactMap(\.userInfo)
-    .compactMap { userInfo in
+    .notifications(named: NextNumberNotification.name,
+                   object: NotificationPoster.shared)
+    .compactMap(\.userInfo)
+    .compactMap {userInfo in
       userInfo[NextNumberNotification.numberKey] as? Int
     }
-    .map { number in Entry(number: number)}
+    .map { number in
+      Entry(number: number)
+    }
 }
+

@@ -3,7 +3,9 @@ import Foundation
 enum NextNumberNotification {}
 
 extension NextNumberNotification {
-  static let name = Notification.Name("nextNumberNotification")
-  static let numberKey
+  
+  public static let name = Notification.Name("nextNumberNotification")
+  
+  public static let numberKey
   = "NextNumberNotificationUserInfoDictionaryNumberKey"
 }

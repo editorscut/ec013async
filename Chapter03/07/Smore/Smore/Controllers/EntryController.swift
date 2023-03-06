@@ -3,7 +3,6 @@ import Combine
 @MainActor
 class EntryController: ObservableObject {
   @Published private(set) var entries: [Entry] = []
-  private let receiver = CombineReceiver.shared
   
   init() {
     Task {
@@ -14,7 +13,7 @@ class EntryController: ObservableObject {
 
 extension EntryController {
   private func listenForEntries() async {
-    for await entry in receiver.entries {
+    for await entry in CombineReceiver.shared.entries {
       entries.append(entry)
     }
   }

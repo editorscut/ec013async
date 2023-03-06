@@ -8,6 +8,8 @@ extension MainView: View {
   var body: some View {
     NavigationStack {
       VStack {
+//        EntryGrid(entries: controller.entries)
+//        EntryGrid(entries: controller.entries2)
         EntryPairGrid(entryPairs: controller.entryPairs)
       }
       .padding()

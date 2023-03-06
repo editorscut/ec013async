@@ -3,7 +3,6 @@ import Combine
 @MainActor
 class EntryController: ObservableObject {
   @Published private(set) var entries: [Entry] = []
-  private let receiver = NotificationReceiver.shared
   
   init() {
     Task {
@@ -14,7 +13,7 @@ class EntryController: ObservableObject {
 
 extension EntryController {
   private func listenForNumbers() async {
-    for await number in receiver.numbers {
+    for await number in NotificationReceiver.shared.numbers {
       entries.append(Entry(number: number))
     }
   }

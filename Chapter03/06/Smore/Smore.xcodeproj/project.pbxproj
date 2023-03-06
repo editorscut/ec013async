@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		62BC8EAA295F65AB00849207 /* IntPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC8EA9295F65AB00849207 /* IntPublisher.swift */; };
-		62BC8EAC295F65B500849207 /* CombineReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC8EAB295F65B500849207 /* CombineReceiver.swift */; };
-		62BC8EAE295F65C100849207 /* AsyncSequenceOfEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC8EAD295F65C100849207 /* AsyncSequenceOfEntries.swift */; };
-		62BC8EB0295F65CA00849207 /* StreamProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC8EAF295F65CA00849207 /* StreamProvider.swift */; };
+		62BC8EB4295F665600849207 /* StreamProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC8EB3295F665600849207 /* StreamProvider.swift */; };
+		62BC8EB6295F666600849207 /* IntPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC8EB5295F666600849207 /* IntPublisher.swift */; };
+		62BC8EB8295F666F00849207 /* CombineReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC8EB7295F666F00849207 /* CombineReceiver.swift */; };
+		62BC8EBA295F668300849207 /* AsyncSequenceOfEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC8EB9295F668300849207 /* AsyncSequenceOfEntries.swift */; };
 		62DB2387295630B70013CECC /* SmoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB2386295630B70013CECC /* SmoreApp.swift */; };
 		62DB2389295630B70013CECC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB2388295630B70013CECC /* MainView.swift */; };
 		62DB238B295630B80013CECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62DB238A295630B80013CECC /* Assets.xcassets */; };
@@ -26,10 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		62BC8EA9295F65AB00849207 /* IntPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntPublisher.swift; sourceTree = "<group>"; };
-		62BC8EAB295F65B500849207 /* CombineReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineReceiver.swift; sourceTree = "<group>"; };
-		62BC8EAD295F65C100849207 /* AsyncSequenceOfEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSequenceOfEntries.swift; sourceTree = "<group>"; };
-		62BC8EAF295F65CA00849207 /* StreamProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamProvider.swift; sourceTree = "<group>"; };
+		62BC8EB3295F665600849207 /* StreamProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamProvider.swift; sourceTree = "<group>"; };
+		62BC8EB5295F666600849207 /* IntPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntPublisher.swift; sourceTree = "<group>"; };
+		62BC8EB7295F666F00849207 /* CombineReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineReceiver.swift; sourceTree = "<group>"; };
+		62BC8EB9295F668300849207 /* AsyncSequenceOfEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSequenceOfEntries.swift; sourceTree = "<group>"; };
 		62DB2383295630B70013CECC /* Smore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DB2386295630B70013CECC /* SmoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoreApp.swift; sourceTree = "<group>"; };
 		62DB2388295630B70013CECC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -56,20 +56,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		62BC8EA7295F658E00849207 /* Streams */ = {
+		62BC8EB1295F662A00849207 /* Streams */ = {
 			isa = PBXGroup;
 			children = (
-				62BC8EAF295F65CA00849207 /* StreamProvider.swift */,
+				62BC8EB3295F665600849207 /* StreamProvider.swift */,
 			);
 			path = Streams;
 			sourceTree = "<group>";
 		};
-		62BC8EA8295F659500849207 /* Combine */ = {
+		62BC8EB2295F663100849207 /* Combine */ = {
 			isa = PBXGroup;
 			children = (
-				62BC8EA9295F65AB00849207 /* IntPublisher.swift */,
-				62BC8EAB295F65B500849207 /* CombineReceiver.swift */,
-				62BC8EAD295F65C100849207 /* AsyncSequenceOfEntries.swift */,
+				62BC8EB5295F666600849207 /* IntPublisher.swift */,
+				62BC8EB7295F666F00849207 /* CombineReceiver.swift */,
+				62BC8EB9295F668300849207 /* AsyncSequenceOfEntries.swift */,
 			);
 			path = Combine;
 			sourceTree = "<group>";
@@ -114,8 +114,8 @@
 			children = (
 				62DB239F29563AC60013CECC /* EntryController.swift */,
 				62DB239829563A7D0013CECC /* Notifications */,
-				62BC8EA8295F659500849207 /* Combine */,
-				62BC8EA7295F658E00849207 /* Streams */,
+				62BC8EB2295F663100849207 /* Combine */,
+				62BC8EB1295F662A00849207 /* Streams */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -231,18 +231,18 @@
 			files = (
 				62DB23A029563AC60013CECC /* EntryController.swift in Sources */,
 				62DB239A29563A960013CECC /* NotificationPoster.swift in Sources */,
-				62BC8EAC295F65B500849207 /* CombineReceiver.swift in Sources */,
-				62BC8EAA295F65AB00849207 /* IntPublisher.swift in Sources */,
 				62DB23AC29563B290013CECC /* MultipleOfFiveError.swift in Sources */,
 				62DB239C29563AA20013CECC /* NotificationReceiver.swift in Sources */,
-				62BC8EB0295F65CA00849207 /* StreamProvider.swift in Sources */,
-				62BC8EAE295F65C100849207 /* AsyncSequenceOfEntries.swift in Sources */,
 				62DB23A229563AF10013CECC /* EntryGrid.swift in Sources */,
+				62BC8EB6295F666600849207 /* IntPublisher.swift in Sources */,
 				62DB2389295630B70013CECC /* MainView.swift in Sources */,
 				62DB23AA29563B1F0013CECC /* Entry.swift in Sources */,
+				62BC8EB8295F666F00849207 /* CombineReceiver.swift in Sources */,
 				62DB239E29563AB10013CECC /* NextNumberNotification.swift in Sources */,
 				62DB23A429563AFA0013CECC /* NextButton.swift in Sources */,
+				62BC8EBA295F668300849207 /* AsyncSequenceOfEntries.swift in Sources */,
 				62DB2387295630B70013CECC /* SmoreApp.swift in Sources */,
+				62BC8EB4295F665600849207 /* StreamProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

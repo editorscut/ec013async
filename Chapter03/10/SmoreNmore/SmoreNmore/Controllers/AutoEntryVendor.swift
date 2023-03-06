@@ -16,8 +16,8 @@ class AutoEntryVendor {
     let timer
     = AsyncTimerSequence.repeating(every: .seconds(delay))
     continuation.onTermination = { termination in
-      print("Stopped (is filled =", self.isFilled, ")"
-            , termination)
+      print("Stopped (isFilled =", self.isFilled, ")",
+      termination)
     }
     Task {
       for await _ in timer {
@@ -32,3 +32,5 @@ class AutoEntryVendor {
     }
   }
 }
+
+

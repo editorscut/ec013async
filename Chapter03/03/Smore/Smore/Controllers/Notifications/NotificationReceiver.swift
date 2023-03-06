@@ -3,13 +3,13 @@ import Foundation
 class NotificationReceiver {
   static let shared = NotificationReceiver()
   private init() {}
-
-  let notifications
-  = NotificationCenter.default
-    .notifications(named: NextNumberNotification.name)
+  
+  let notifications = NotificationCenter.default
+    .notifications(named: NextNumberNotification.name,
+                   object: NotificationPoster.shared)
   
   lazy private(set) var numbers
-  = AsyncStream(Int.self) {continuation in
+  = AsyncStream<Int> { continuation in
     Task {
       for await notification in notifications {
         if let userInfo = notification.userInfo,
