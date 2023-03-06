@@ -16,15 +16,15 @@ extension MainView: View {
       }
       IconGrid(appStore: appStore)
       if !appStore.appSearches.isEmpty {
-        List(appStore.appSearches.sorted(by: >),
-             id: \.key) { key, value in
-          Text("\(value) (\(key))")
-            .onTapGesture {
-              searchTerm = value
-              appStore.search(for: searchTerm)
+              List(appStore.appSearches.sorted(by: >),
+                   id: \.key) { key, value in
+                Text("\(value) (\(key))")
+                  .onTapGesture {
+                    searchTerm = value
+                    appStore.search(for: searchTerm)
+                  }
+              }
             }
-        }
-      }
     }
     .padding()
   }

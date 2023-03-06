@@ -1,3 +1,5 @@
+import Foundation
+
 actor ProgressMonitor {
   let searchTerm: String
   private(set) var total = 0
@@ -8,7 +10,6 @@ actor ProgressMonitor {
   }
 }
 
-
 extension ProgressMonitor {
   func reset(total: Int) {
     self.total = total
@@ -17,18 +18,19 @@ extension ProgressMonitor {
   }
   
   func header() {
-    print("\n================== \n",
-          searchTerm,
-          "has ", total, "results")
-    separator()
+    Task {
+      print("\n=========================\n", searchTerm,
+            "has", total, "results")
+      separator()
+    }
   }
   
   nonisolated
   func separator() {
-    print("================== \n")
+    print("=========================\n")
   }
   
-  func registerImageDownload(for appName: String)  {
+  func registerImageDownload(for appName: String) {
     downloaded += 1
     status(for: appName)
   }

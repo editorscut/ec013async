@@ -2,6 +2,7 @@ import Distributed
 
 distributed actor Searcher {
   typealias ActorSystem = LocalTestingDistributedActorSystem
+  
   let name: String
   let appStore: AppStore
   
@@ -24,6 +25,5 @@ extension Searcher {
   
   distributed func receive(_ searchTerm: String,
                            from searcherName: String) async throws {
-    
   }
 }

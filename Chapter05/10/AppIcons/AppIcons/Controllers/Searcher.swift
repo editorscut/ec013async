@@ -3,6 +3,7 @@ import BonjourDemoActorSystem
 
 distributed actor Searcher {
   typealias ActorSystem = SampleLocalNetworkActorSystem
+  
   let name: String
   let appStore: AppStore
   
@@ -26,6 +27,6 @@ extension Searcher {
   distributed func receive(_ searchTerm: String,
                            from searcherName: String) async throws {
     await appStore.addSearch(for: searchTerm,
-                             by: searcherName)
+                                 by: searcherName)
   }
 }

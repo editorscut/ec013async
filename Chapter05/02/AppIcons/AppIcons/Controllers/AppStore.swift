@@ -12,11 +12,12 @@ class AppStore: ObservableObject {
 
 extension AppStore {
   func search(for rawText: String)  {
-    resetForSearch(for: rawText)
+    resetSearch(for: rawText)
     downloadTask = Task {
       do {
         apps = try await retrieveApps(for: rawText)
         monitor?.reset(total: apps.count)
+        print(apps)
         try await retrieveImages()
       } catch {
         print(error.localizedDescription)
@@ -40,9 +41,9 @@ extension AppStore {
 
 extension AppStore {
   private func retrieveImages() async throws {
-    guard let monitor = self.monitor else { return }
+    guard let monitor else { return }
     try await withThrowingTaskGroup(of: (UIImage?,
-                                     String).self) {group in
+                                     String).self) { group in
       for app in apps {
         group.addTask {
           async let (imageData, _)
@@ -71,7 +72,7 @@ extension AppStore {
 }
 
 extension AppStore {
-  private func resetForSearch(for rawText: String) {
+  private func resetSearch(for rawText: String) {
     downloadTask?.cancel()
     apps.removeAll()
     images.removeAll()

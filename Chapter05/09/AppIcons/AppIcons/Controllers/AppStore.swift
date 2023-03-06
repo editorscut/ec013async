@@ -17,36 +17,24 @@ class AppStore: ObservableObject {
 }
 
 extension AppStore {
-  nonisolated
-  func setSearcher(with name: String) {
-    Task {
-      let searcher = Searcher(name: name,
-                              appStore: self,
-                              actorSystem: LocalTestingDistributedActorSystem())
-      await MainActor.run {
-        self.searcher = searcher
-      }
-    }
-  }
-}
-
-extension AppStore {
   func search(for rawText: String)  {
     if let _ = self.searcher {
       setSearcher(with: UIDevice.current.name)
     }
-    resetForSearch(for: rawText)
+    resetSearch(for: rawText)
     downloadTask = Task {
       do {
         try await Tracker.$searchTerm.withValue(rawText) {
           apps = try await retrieveApps(for: rawText)
           try await Tracker.$totalImages.withValue(apps.count) {
             await ProgressMonitor.shared.reset()
+            print(apps)
             try await retrieveImages()
           }
         }
       } catch {
         isUpdating = false
+        print(error.localizedDescription)
       }
     }
   }
@@ -69,7 +57,7 @@ extension AppStore {
 extension AppStore {
   private func retrieveImages() async throws {
     try await withThrowingTaskGroup(of: (UIImage?,
-                                         String).self) {group in
+                                     String).self) { group in
       for app in apps {
         group.addTask { @ProgressMonitor in
           try await Tracker.$appName.withValue(app.name) {
@@ -85,14 +73,14 @@ extension AppStore {
         }
       }
       for try await (image, name) in group {
-         publish(image: image,
-                      forAppNamed: name)
+        downloadedImages = await ProgressMonitor.shared.downloaded
+        publish(image: image, 
+                forAppNamed: name)
       }
-        isUpdating = false
+      isUpdating = false
     }
   }
 }
-
 
 extension AppStore {
   private func publish(image: UIImage?,
@@ -104,7 +92,7 @@ extension AppStore {
 }
 
 extension AppStore {
-  private func resetForSearch(for rawText: String) {
+  private func resetSearch(for rawText: String) {
     downloadTask?.cancel()
     apps.removeAll()
     images.removeAll()
@@ -124,4 +112,16 @@ extension AppStore {
   }
 }
 
-
+extension AppStore {
+  nonisolated
+  func setSearcher(with name: String) {
+    Task {
+      let searcher = Searcher(name: name,
+                              appStore: self,
+                              actorSystem: LocalTestingDistributedActorSystem())
+      await MainActor.run {
+        self.searcher = searcher
+      }
+    }
+  }
+}
