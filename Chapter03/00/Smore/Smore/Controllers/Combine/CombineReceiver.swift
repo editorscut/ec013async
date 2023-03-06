@@ -11,5 +11,7 @@ class CombineReceiver {
     .compactMap { dictionary in
       dictionary[NextNumberNotification.numberKey] as? Int
     }
-    .map {number in Entry(number: number)}
+    .map {number in
+      Entry(number: number)
+    }
 }

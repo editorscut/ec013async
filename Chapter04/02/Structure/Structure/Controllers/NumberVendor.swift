@@ -8,4 +8,3 @@ struct NumberVendor {
     return Int.random(in: 1...50)
   }
 }
-

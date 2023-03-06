@@ -25,11 +25,10 @@ extension EntryController {
         }
         comparison = Comparison(try await plainTask.value,
                                 try await filledTask.value)
-        plainEntry = Entry(number: try await plainTask.value)
         filledEntry = Entry(number: try await filledTask.value,
                             isFilled: true)
-      }
-      catch {
+        plainEntry = Entry(number: try await plainTask.value)
+      } catch {
         print(error)
       }
     }

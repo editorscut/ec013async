@@ -15,12 +15,12 @@ extension EntryController {
     clear()
     Task {
       async let plainNumber = plain.randomNumber()
-      async let filledNumber = await filled.randomNumber()
+      async let filledNumber = filled.randomNumber()
       comparison = Comparison(await plainNumber,
                               await filledNumber)
-      plainEntry = Entry(number: await plainNumber)
       filledEntry = Entry(number: await filledNumber,
                           isFilled: true)
+      plainEntry = Entry(number: await plainNumber)
     }
   }
 }

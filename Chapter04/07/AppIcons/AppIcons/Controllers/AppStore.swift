@@ -11,11 +11,11 @@ class AppStore: ObservableObject {
 
 extension AppStore {
   func search(for rawText: String)  {
-    resetForNextSearch()
+    resetForNewSearch()
     downloadTask = Task {
       do {
         apps = try await retrieveApps(for: rawText)
-        print(apps)
+        print(apps.map(\.name))
         try await retrieveImages()
       } catch {
         print(error.localizedDescription)
@@ -40,11 +40,11 @@ extension AppStore {
 extension AppStore {
   private func retrieveImages() async throws {
     try await withThrowingTaskGroup(of: (UIImage?,
-                                     String).self) { group in
+                                         String).self) { group in
       for app in apps {
         group.addTask {
           async let (imageData, _)
-          = try await ephemeralURLSession
+          = ephemeralURLSession
             .data(from: app.artworkURL)
           let image = UIImage(data: try await imageData)
           return (image, app.name)
@@ -68,7 +68,7 @@ extension AppStore {
 }
 
 extension AppStore {
-  private func resetForNextSearch() {
+  private func resetForNewSearch() {
     downloadTask?.cancel()
     apps.removeAll()
     images.removeAll()

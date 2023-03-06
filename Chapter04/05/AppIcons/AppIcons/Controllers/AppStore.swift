@@ -13,7 +13,7 @@ extension AppStore {
     Task {
       do {
         apps = try await retrieveApps(for: rawText)
-        print(apps)
+        print(apps.map(\.name))
         try await retrieveImages()
       } catch {
         print(error.localizedDescription)
@@ -24,7 +24,7 @@ extension AppStore {
 
 extension AppStore {
   private func retrieveApps(for rawText: String)
-                                 async throws -> [AppInfo] {
+  async throws -> [AppInfo] {
     let (data, _)
     = try await ephemeralURLSession
       .data(from: url(for: rawText))
